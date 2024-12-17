@@ -1,0 +1,200 @@
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Police moderne */
+    background-color: #f8f9fa; /* Gris clair */
+    color: #333; /* Texte principal */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Buttons */
+button, .fav, .book {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
+    border: 2px solid transparent;
+}
+
+button {
+    background-color: white;
+    color: #7896c5;
+    border-color: #7896c5;
+}
+
+button:hover {
+    background-color: #7896c5;
+    color: white;
+    transform: scale(1.05);
+}
+
+.fav {
+    background-color: white;
+    color: #bfa65f;
+    border-color: #bfa65f;
+}
+
+.fav:hover {
+    background-color: #bfa65f;
+    color: white;
+    transform: scale(1.05);
+}
+
+.book {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.book:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+    margin: 1.5em 0;
+    padding: 1.5em;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Images Responsives et Nettes */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Hauteur fixe */
+    object-fit: cover; /* Évite les déformations */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+/* Card Text */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2c3e50; /* Bleu foncé */
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.text-success {
+    color: #27ae60 !important; /* Vert */
+}
+
+.text-secondary {
+    color: #95a5a6 !important; /* Gris clair */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2c3e50 !important; /* Bleu foncé */
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #f8f9fa !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Flex Layout for Items */
+.item {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.item a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.item a:hover {
+    color: #007bff;
+}
+
+/* Responsive Media Queries */
+
+/* Large screens (laptops and desktops) */
+@media only screen and (min-width: 1024px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .card {
+        margin: 1.5em;
+    }
+}
+
+/* Tablets and smaller screens */
+@media only screen and (max-width: 1024px) {
+    .card {
+        margin: 1rem;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+}
+
+/* Mobile screens */
+@media only screen and (max-width: 768px) {
+    .card {
+        padding: 1rem;
+    }
+
+    .card-img-top {
+        height: 120px;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+/* Very small screens (phones in portrait mode) */
+@media only screen and (max-width: 500px) {
+    .card {
+        margin: 0.5rem;
+    }
+
+    .card-img-top {
+        height: 100px;
+    }
+
+    button, .fav, .book {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

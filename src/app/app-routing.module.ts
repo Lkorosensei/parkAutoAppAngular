@@ -1,21 +1,23 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { VehiculeComponent } from './components/vehicule/vehicule.component';
+import { VoitureComponent } from './components/voiture/voiture.component';
+import { CamionComponent } from './components/camion/camion.component';
 
 const routes: Routes = [
-
-  // {
-  //   path:'vehicule',
-  //   component: VehiculeComponent
-  // },
-  // {
-  //   path:'voiture',
-  //   component: VoitureComponent
-  // },
-  // {
-  //   path: 'camion',
-  //   component: CamionComponent
-  // }
-];
+  {
+  path:'vehicules',
+  component : VehiculeComponent
+},
+  {
+  path:'voiture',
+  component : VoitureComponent
+},
+  {
+  path:'camion',
+  component : CamionComponent
+}
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
