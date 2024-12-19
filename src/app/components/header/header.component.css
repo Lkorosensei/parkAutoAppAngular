@@ -1,0 +1,40 @@
+/* Personnalisation du header */
+header {
+    background-color: #0E9FFC; /* Bleu personnalisé */
+}
+
+header .nav-link {
+    color: white !important; /* Forcer la couleur blanche des liens */
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header .nav-link:hover {
+    color: #f39c12 !important; /* Changer la couleur des liens au survol */
+}
+
+header .input-group {
+    width: 300px; /* Taille fixe pour la barre de recherche */
+}
+
+header .input-group .form-control {
+    border-radius: 30px; /* Bord arrondi pour le champ de recherche */
+}
+
+header .input-group .input-group-text {
+    border-radius: 30px; /* Bord arrondi pour l'icône */
+}
+
+header .btn-light {
+    border-radius: 50%; /* Rendre le bouton du panier rond */
+    position: relative;
+    padding: 12px 18px;
+}
+
+header .badge {
+    font-size: 12px; /* Taille du badge */
+    top: -5px;
+    right: -5px;
+}

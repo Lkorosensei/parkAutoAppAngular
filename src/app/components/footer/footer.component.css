@@ -1,0 +1,27 @@
+footer {
+    background-color: #333; /* Couleur de fond personnalisée */
+}
+
+footer a {
+    transition: color 0.3s ease; /* Effet de transition sur les liens */
+}
+
+footer a:hover {
+    color: #f39c12; /* Changer la couleur au survol */
+}
+
+footer .fa {
+    margin-right: 8px; /* Espacement entre les icônes et le texte */
+}
+
+footer .list-unstyled {
+    padding-left: 0;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+}
+
+footer .text-center p {
+    font-size: 14px; /* Taille du texte au bas du footer */
+}

@@ -1,28 +1,39 @@
-<div class="container mt-5">
+<div class="container">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm rounded">
-        <a class="navbar-brand text-white fw-bold" href="#">Véhicules</a>
+    <nav class="navbar">
+        <h1>Garage ParkAuto</h1>
     </nav>
 
-    <!-- Titre de la page -->
-    <h2 class="text-center my-4 text-primary fw-bold">Liste des Véhicules</h2>
+    <!-- Titre -->
+    <h2>Listes des véhicules</h2>
 
-    <!-- Grille de cartes -->
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- Liste des véhicules -->
+    <div class="vehicle-list">
         <ng-container *ngFor="let item of vehicules">
-            <div class="col">
-                <div class="card h-100 shadow-lg border-0 rounded-3">
-                    <!-- Image du véhicule -->
-                    <img src="http://localhost:8086/images/{{item.image_vehicule}}" 
-                         class="card-img-top img-fluid vehicle-img" 
-                         alt="Image du véhicule">
-                    <div class="card-body bg-light text-dark">
-                        <h5 class="card-title fw-bold">Matricule: {{item.matricule}}</h5>
-                        <p class="card-text">Année: <span class="text-secondary">{{item.anneeModel}}</span></p>
-                        <p class="card-text">Prix: 
-                            <span class="text-success fw-bold">{{item.prix | currency:'€'}}</span>
-                        </p>
+            <!-- Carte du véhicule -->
+            <div class="card">
+                <!-- Image du véhicule -->
+                <img src="http://localhost:8086/images/{{item.image_vehicule}}" class="card-img-top" alt="image">
+                
+                <!-- Corps de la carte -->
+                <div class="card-body">
+                    <!-- Matricule -->
+                    <div class="card-text">
+                        <h5><i class="fas fa-car"></i> Immatriculation : {{item.matricule}}</h5>
                     </div>
+                    <!-- Année du modèle -->
+                    <div class="card-text">
+                        <h5><i class="fas fa-calendar-alt"></i> Année : {{item.anneeModel}}</h5>
+                    </div>
+                    <!-- Prix -->
+                    <div class="card-text">
+                        <h5><i class="fas fa-dollar-sign"></i> Prix : {{item.prix}}€</h5>
+                    </div>
+                    <div class="card-text">
+                        <button class="btn btn-primary fav m-1 md-raised" (click)="actionAddToCart(item)">Ajouter au panier</button>
+                    </div>
+                    <!-- Bouton -->
+                    <button class="btn">Voir plus</button>
                 </div>
             </div>
         </ng-container>

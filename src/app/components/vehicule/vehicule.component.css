@@ -1,200 +1,154 @@
-/* Global styles */
+/* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif; /* Police moderne */
-    background-color: #f8f9fa; /* Gris clair */
-    color: #333; /* Texte principal */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9; /* Couleur douce pour l'arrière-plan */
     margin: 0;
     padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
 }
 
+/* Conteneur principal */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-/* Buttons */
-button, .fav, .book {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 500;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
-    border: 2px solid transparent;
-}
-
-button {
-    background-color: white;
-    color: #7896c5;
-    border-color: #7896c5;
-}
-
-button:hover {
-    background-color: #7896c5;
-    color: white;
-    transform: scale(1.05);
-}
-
-.fav {
-    background-color: white;
-    color: #bfa65f;
-    border-color: #bfa65f;
-}
-
-.fav:hover {
-    background-color: #bfa65f;
-    color: white;
-    transform: scale(1.05);
-}
-
-.book {
-    background-color: white;
-    color: black;
-    border-color: black;
-}
-
-.book:hover {
-    background-color: black;
-    color: white;
-    transform: scale(1.05);
-}
-
-/* Cards */
-.card {
-    margin: 1.5em 0;
-    padding: 1.5em;
-    border: none;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Images Responsives et Nettes */
-.card-img-top {
-    width: 100%;
-    height: 200px; /* Hauteur fixe */
-    object-fit: cover; /* Évite les déformations */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-
-.card-img-top:hover {
-    transform: scale(1.05);
-    filter: brightness(0.9);
-}
-
-/* Card Text */
-.card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #2c3e50; /* Bleu foncé */
-    margin-bottom: 0.5rem;
-}
-
-.card-text {
-    font-size: 1rem;
-    color: #555;
-}
-
-.text-success {
-    color: #27ae60 !important; /* Vert */
-}
-
-.text-secondary {
-    color: #95a5a6 !important; /* Gris clair */
 }
 
 /* Navbar */
 .navbar {
-    background-color: #2c3e50 !important; /* Bleu foncé */
+    background-color: #6c757d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    margin-bottom: 20px;
     border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-    color: #f8f9fa !important;
-    font-weight: bold;
     font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Flex Layout for Items */
-.item {
-    margin: 1rem 0;
+/* Titre principal */
+h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/* Grille des cartes */
+.vehicle-list {
+    display: grid; /* Utilisation d'une grille pour organiser les cartes */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Colonnes flexibles */
+    gap: 15px; /* Espacement entre les cartes */
+    width: 100%; /* La grille occupe toute la largeur du conteneur */
+}
+
+/* Style des cartes */
+.card {
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center; /* Centre le contenu des cartes */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Image des cartes */
+.card-img-top {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1);
+}
+
+/* Contenu des cartes */
+.card-body {
+    padding: 15px;
     text-align: center;
 }
 
-.item a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s;
+.card-body h5 {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #5a8f9e;
 }
 
-.item a:hover {
-    color: #007bff;
+/* Bouton */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #5a8f9e;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Responsive Media Queries */
+.btn:hover {
+    background-color: #4b7a83;
+    transform: scale(1.05);
+}
 
-/* Large screens (laptops and desktops) */
-@media only screen and (min-width: 1024px) {
-    .container {
-        max-width: 95%;
+/* Responsive */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
     }
 
     .card {
-        margin: 1.5em;
+        max-width: 100%;
+    }
+
+    .vehicle-list {
+        gap: 10px;
     }
 }
 
-/* Tablets and smaller screens */
-@media only screen and (max-width: 1024px) {
-    .card {
-        margin: 1rem;
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
     }
 
-    .card-img-top {
-        height: 150px;
-    }
-}
-
-/* Mobile screens */
-@media only screen and (max-width: 768px) {
-    .card {
-        padding: 1rem;
-    }
-
-    .card-img-top {
-        height: 120px;
-    }
-
-    .navbar-brand {
+    .navbar {
         font-size: 1.2rem;
-    }
-}
-
-/* Very small screens (phones in portrait mode) */
-@media only screen and (max-width: 500px) {
-    .card {
-        margin: 0.5rem;
+        height: 60px;
     }
 
-    .card-img-top {
-        height: 100px;
-    }
-
-    button, .fav, .book {
-        padding: 8px 15px;
+    .card-body h5 {
         font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
     }
 }

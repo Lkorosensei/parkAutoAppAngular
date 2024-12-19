@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { VehiculeService } from '../../services/vehicule/vehicule.service';
 import { Router } from '@angular/router';
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'app-vehicule',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class VehiculeComponent implements OnInit{
   vehicules : any
-  constructor(private vehiculeService: VehiculeService, private router:Router){}
+  constructor(private vehiculeService: VehiculeService, private cartService: CartService, private router:Router){}
 
   ngOnInit(): void {
     this.getVehicules()
@@ -24,5 +25,9 @@ export class VehiculeComponent implements OnInit{
       }
     )
   };
+
+  actionAddToCart(item:any) {
+    this.cartService.addToCart(item);
+  }
 
 }
